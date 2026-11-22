@@ -1,0 +1,82 @@
+{
+  "A": {
+    "name": "Log + filtre + Otsu (otomatik global esik)",
+    "config": {
+      "intensity": {
+        "method": "log"
+      },
+      "filter": {
+        "method": "gaussian+sharpen",
+        "ksize": 5,
+        "amount": 1.0
+      },
+      "segmentation": {
+        "method": "otsu"
+      },
+      "morphology": [
+        {
+          "op": "close",
+          "size": 3
+        },
+        {
+          "op": "open",
+          "size": 3
+        },
+        {
+          "op": "fill_holes"
+        }
+      ],
+      "separation": {
+        "method": "watershed",
+        "min_distance": 15
+      },
+      "min_area": 400
+    },
+    "experiment_id": "E99"
+  },
+  "B": {
+    "name": "Gauss + adaptif esik (yerel esik)",
+    "config": {
+      "intensity": {
+        "method": "none"
+      },
+      "filter": {
+        "method": "gaussian",
+        "ksize": 9
+      },
+      "segmentation": {
+        "method": "adaptive",
+        "block": 51,
+        "C": 1
+      },
+      "morphology": [],
+      "separation": {
+        "method": "none"
+      },
+      "min_area": 200
+    },
+    "experiment_id": "E104"
+  },
+  "C": {
+    "name": "Koordinat inis sonucu (sabit esik)",
+    "config": {
+      "intensity": {
+        "method": "log"
+      },
+      "filter": {
+        "method": "median",
+        "ksize": 9
+      },
+      "segmentation": {
+        "method": "fixed",
+        "threshold": 80
+      },
+      "morphology": [],
+      "separation": {
+        "method": "none"
+      },
+      "min_area": 200
+    },
+    "experiment_id": "E83"
+  }
+}

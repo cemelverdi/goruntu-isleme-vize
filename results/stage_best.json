@@ -1,0 +1,74 @@
+{
+  "Tur1/1-Yogunluk": {
+    "choice": "log donusumu",
+    "experiment_id": "E07",
+    "MAE": 2.3,
+    "RMSE": 2.4698
+  },
+  "Tur1/2-Filtre": {
+    "choice": "Gauss 5x5 + keskinlestirme",
+    "experiment_id": "E14",
+    "MAE": 1.7,
+    "RMSE": 1.9235
+  },
+  "Tur1/3-Segmentasyon": {
+    "choice": "Sabit esik T=80",
+    "experiment_id": "E17",
+    "MAE": 1.6,
+    "RMSE": 1.8974
+  },
+  "Tur1/4-Morfoloji": {
+    "choice": "morfoloji yok",
+    "experiment_id": "E28",
+    "MAE": 1.4,
+    "RMSE": 1.7889
+  },
+  "Tur1/5-Ayirma": {
+    "choice": "watershed min_dist=10",
+    "experiment_id": "E38",
+    "MAE": 1.0,
+    "RMSE": 1.2649
+  },
+  "Tur1/6-MinAlan": {
+    "choice": "min alan 200",
+    "experiment_id": "E38",
+    "MAE": 1.0,
+    "RMSE": 1.2649
+  },
+  "Tur2/1-Yogunluk": {
+    "choice": "log donusumu",
+    "experiment_id": "E38",
+    "MAE": 1.0,
+    "RMSE": 1.2649
+  },
+  "Tur2/2-Filtre": {
+    "choice": "Median 9x9",
+    "experiment_id": "E58",
+    "MAE": 0.8,
+    "RMSE": 1.2649
+  },
+  "Tur2/3-Segmentasyon": {
+    "choice": "Sabit esik T=80",
+    "experiment_id": "E58",
+    "MAE": 0.8,
+    "RMSE": 1.2649
+  },
+  "Tur2/4-Morfoloji": {
+    "choice": "morfoloji yok",
+    "experiment_id": "E58",
+    "MAE": 0.8,
+    "RMSE": 1.2649
+  },
+  "Tur2/5-Ayirma": {
+    "choice": "watershed yok",
+    "experiment_id": "E83",
+    "MAE": 0.8,
+    "RMSE": 1.2649
+  },
+  "Tur2/6-MinAlan": {
+    "choice": "min alan 200",
+    "experiment_id": "E83",
+    "MAE": 0.8,
+    "RMSE": 1.2649
+  }
+}
