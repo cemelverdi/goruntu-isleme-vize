@@ -1,0 +1,3 @@
+sequence,n_frames,shape,dtype,max_intensity,mean_mean,p99_mean,p99_9_mean,frac_zero_mean,unique_levels_mean
+01,92,1024x1024,uint8,255,3.973,67.413,137.031,0.573,123.707
+02,92,1024x1024,uint8,182,2.091,31.652,53.043,0.618,44.109

@@ -1,0 +1,16 @@
+sample_id,group,sequence,frame_index,test_block,reference_count,n_marker_fragments,max_label,fragmented
+D01,development,01,1,,23,23,34,False
+D02,development,01,4,,23,23,34,False
+D03,development,01,9,,23,23,34,False
+D04,development,01,17,,23,23,34,False
+D05,development,01,21,,24,24,34,False
+D06,development,01,27,,24,24,34,False
+D07,development,01,28,,24,24,34,False
+D08,development,01,35,,24,24,34,False
+D09,development,01,45,,24,24,34,False
+D10,development,01,91,,20,20,34,False
+V01,validation,01,53,,21,21,34,False
+V02,validation,01,59,,21,21,34,False
+V03,validation,01,63,,21,21,34,False
+V04,validation,01,71,,21,21,34,False
+V05,validation,01,82,,20,20,34,False

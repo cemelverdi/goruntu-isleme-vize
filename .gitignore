@@ -12,3 +12,6 @@ __pycache__/
 .venv/
 venv/
 .DS_Store
+
+# Veri görüntüsü içeren şekiller yalnızca raporda kullanılır (Bölüm 18.5)
+report_figures/
