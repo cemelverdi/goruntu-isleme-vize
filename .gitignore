@@ -1,0 +1,14 @@
+# Veri seti GitHub'a yüklenmez (ödev Bölüm 18.5)
+data/
+Fluo-N2DH-GOWT1/
+*.tif
+*.tiff
+*.zip
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
