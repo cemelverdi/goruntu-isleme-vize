@@ -1,0 +1,16 @@
+sample_id,group,sequence,frame_index,test_block,reference_count,n_marker_fragments,max_label,fragmented
+T01,test,02,23,T1,24,24,56,False
+T02,test,02,24,T1,23,23,56,False
+T03,test,02,25,T1,25,25,62,False
+T04,test,02,26,T1,25,25,62,False
+T05,test,02,27,T1,25,25,62,False
+T06,test,02,42,T2,27,27,62,False
+T07,test,02,43,T2,27,27,62,False
+T08,test,02,44,T2,26,26,62,False
+T09,test,02,45,T2,26,26,62,False
+T10,test,02,46,T2,28,28,64,False
+T11,test,02,76,T3,31,31,67,False
+T12,test,02,77,T3,31,31,67,False
+T13,test,02,78,T3,31,31,67,False
+T14,test,02,79,T3,31,31,67,False
+T15,test,02,80,T3,29,29,67,False
