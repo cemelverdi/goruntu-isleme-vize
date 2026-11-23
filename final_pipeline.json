@@ -1,0 +1,158 @@
+{
+  "locked": true,
+  "locked_note": "Bu dosya doğrulama sonrası sabitlenmiştir; test sonuçlarından sonra değiştirilemez.",
+  "seed": 31092,
+  "selection_rule": "min validation MAE; ties -> RMSE -> mean time -> number of steps",
+  "selected_candidate": "A",
+  "selected_name": "Log + filtre + Otsu (otomatik global esik)",
+  "development_experiment_id": "E99",
+  "validation_metrics": {
+    "Val_MAE": 1.2,
+    "Val_RMSE": 1.265,
+    "Val_Bias": 1.2,
+    "Val_ExactAcc": 0.0,
+    "Ort_Sure_s": 0.2198
+  },
+  "pipeline": {
+    "intensity": {
+      "method": "log"
+    },
+    "filter": {
+      "method": "gaussian+sharpen",
+      "ksize": 5,
+      "amount": 1.0
+    },
+    "segmentation": {
+      "method": "otsu"
+    },
+    "morphology": [
+      {
+        "op": "close",
+        "size": 3
+      },
+      {
+        "op": "open",
+        "size": 3
+      },
+      {
+        "op": "fill_holes"
+      }
+    ],
+    "separation": {
+      "method": "watershed",
+      "min_distance": 15
+    },
+    "min_area": 400
+  },
+  "histmatch_reference_frame": [
+    "01",
+    1
+  ],
+  "baseline": {
+    "pipeline": {
+      "intensity": {
+        "method": "none"
+      },
+      "filter": {
+        "method": "none"
+      },
+      "segmentation": {
+        "method": "otsu"
+      },
+      "morphology": [],
+      "separation": {
+        "method": "none"
+      },
+      "min_area": 50
+    },
+    "method": "baseline",
+    "steps": [
+      "read_gray",
+      "otsu_threshold",
+      "remove_small_objects",
+      "connected_components"
+    ],
+    "connectivity": "8",
+    "min_area": 50,
+    "selection_rule": "min development MAE over candidates; tie -> smaller min_area",
+    "candidates": [
+      0,
+      25,
+      50,
+      100,
+      200,
+      400
+    ],
+    "dev_MAE": 5.6
+  },
+  "all_candidates": {
+    "A": {
+      "intensity": {
+        "method": "log"
+      },
+      "filter": {
+        "method": "gaussian+sharpen",
+        "ksize": 5,
+        "amount": 1.0
+      },
+      "segmentation": {
+        "method": "otsu"
+      },
+      "morphology": [
+        {
+          "op": "close",
+          "size": 3
+        },
+        {
+          "op": "open",
+          "size": 3
+        },
+        {
+          "op": "fill_holes"
+        }
+      ],
+      "separation": {
+        "method": "watershed",
+        "min_distance": 15
+      },
+      "min_area": 400
+    },
+    "B": {
+      "intensity": {
+        "method": "none"
+      },
+      "filter": {
+        "method": "gaussian",
+        "ksize": 9
+      },
+      "segmentation": {
+        "method": "adaptive",
+        "block": 51,
+        "C": 1
+      },
+      "morphology": [],
+      "separation": {
+        "method": "none"
+      },
+      "min_area": 200
+    },
+    "C": {
+      "intensity": {
+        "method": "log"
+      },
+      "filter": {
+        "method": "median",
+        "ksize": 9
+      },
+      "segmentation": {
+        "method": "fixed",
+        "threshold": 80
+      },
+      "morphology": [],
+      "separation": {
+        "method": "none"
+      },
+      "min_area": 200
+    }
+  }
+}
